@@ -13,3 +13,14 @@ class Order(models.Model):
     class Meta:
         verbose_name = 'Заказ'
         verbose_name_plural = 'Заказы'
+
+
+class StatusCrm(models.Model):
+    Status_name = models.CharField(max_length = 200, verbose_name = 'Название статуса')
+
+    def __str__(self):
+        return self.Status_name
+
+    class Meta:
+        verbose_name = 'Статус'
+        verbose_name_plural = 'Статусы'
